@@ -5817,7 +5817,7 @@ wysihtml5.quirks.cleanPastedHTML = (function() {
  */
 (function(wysihtml5) {
   var dom                                           = wysihtml5.dom,
-      USE_NATIVE_LINE_BREAK_WHEN_CARET_INSIDE_TAGS  = ["LI", "P", "H1", "H2", "H3", "H4", "H5", "H6"],
+      USE_NATIVE_LINE_BREAK_WHEN_CARET_INSIDE_TAGS  = ["LI", "P", "H1", "H2", "H3", "H4", "H5", "H6", "PRE"],
       LIST_TAGS                                     = ["UL", "OL", "MENU"];
 
   wysihtml5.quirks.insertLineBreakOnReturn = function(composer) {
@@ -7003,7 +7003,7 @@ wysihtml5.commands.bold = {
       // Following elements are grouped
       // when the caret is within a H1 and the H4 is invoked, the H1 should turn into H4
       // instead of creating a H4 within a H1 which would result in semantically invalid html
-      BLOCK_ELEMENTS_GROUP    = ["H1", "H2", "H3", "H4", "H5", "H6", "P", "BLOCKQUOTE", DEFAULT_NODE_NAME];
+      BLOCK_ELEMENTS_GROUP    = ["H1", "H2", "H3", "H4", "H5", "H6", "P", "BLOCKQUOTE", "PRE", DEFAULT_NODE_NAME];
 
   /**
    * Remove similiar classes (based on classRegExp)
